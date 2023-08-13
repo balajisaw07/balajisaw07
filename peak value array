@@ -1,0 +1,32 @@
+  #include <iostream>
+
+using namespace std;
+int peak(int arr[],int size)
+{
+
+    int start=0;
+    int end =size-1;
+   
+     while(start<end)
+  { int mid=(start+end)/2;
+  
+      if(arr[mid]<arr[mid+1])
+      {
+        start=mid+1;
+      }
+      else
+      {
+          end=mid;
+      }
+  }
+  return start;
+}
+
+int main()
+{
+    int arr[6]={1,2,3,4,3,2};
+   peak(arr, 6);
+    cout<< "index of peak variable" <<peak(arr, 6);
+ 
+   return 0;
+}
