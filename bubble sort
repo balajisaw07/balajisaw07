@@ -7,10 +7,17 @@ int main()
     for(int i=1;i<size;i++)
     {
         for(int j=0;j<size-i;j++)
+
         {
+            bool swapped=false;
             if(arr[j]>arr[j+1])
             {
                 swap(arr[j],arr[j+1]);
+                swapped =true;
+            }
+            if (swapped=false)
+            {
+                break;
             }
         }
     }
